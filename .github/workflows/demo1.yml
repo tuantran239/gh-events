@@ -3,7 +3,16 @@ on:
   pull_request:
     types:
       - opened
+    branches:
+      - main
+      - dev
+      - master
   workspace_dispatch:
+  push:
+    branches:
+      - main
+      - dev
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
